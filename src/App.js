@@ -11,10 +11,18 @@ const animation = keyframes`
 `
 const Wrapper = styled.span`
   animation-name: ${animation};
-  animation-duration: 6s;
+  animation-duration: 10s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   font-size: 50px;
+  font-weight: 600;
+`
+const SuccessWrapper = styled.span`
+  animation-name: ${animation};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  font-size: 30px;
   font-weight: 600;
 `
 
@@ -68,6 +76,7 @@ function App() {
           </div>
         )}
       </div>
+      {textResult && <SuccessWrapper><h1 className='success'>Extraction Successful</h1></SuccessWrapper>}
     </div>
   );
 }
